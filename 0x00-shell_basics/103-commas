@@ -1,0 +1,2 @@
+#!/bin/bash
+( ls -a | grep -E "^[0-9a-zA-Z.]" | LC_COLLATE=C sort -d | sed -e '1s/^\.\//\.\//' -e '1!s/^\.\//, /' | tr '\n' ',' ; echo )
